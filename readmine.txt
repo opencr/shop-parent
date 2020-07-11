@@ -1,0 +1,7 @@
+1.端口号分配：
+eureka: 8100
+webchat: 8200
+member: 8300
+gateway/zuul: 80
+2.Spring Cloud gateway 2.1.8 Greenwich.SR3 与Swagger 2.9.2整合
+	参考资料：https://blog.csdn.net/Amor_Leo/article/details/102853186

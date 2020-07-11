@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: shop-webchat
+    
+server:
+  port: 8200
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/
+      
+swagger:
+  base-package: org.sc
+  title: 电商项目-微信服务接口
+  description: 该项目是基于springcloud2.1.x
+  version: 1.0
+  terms-of-service-url: 127.0.0.1
+  contact:
+    name: liuhh
+    email: 123@123.com

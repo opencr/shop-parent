@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: shop-member
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mysql?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456 
+    filters: stat 
+      
+server:
+  port: 8300
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/
+      
+swagger:
+  base-package: org.sc
+  title: 电商项目-会员服务接口
+  description: 该项目是基于springcloud2.1.x
+  version: 1.0
+  terms-of-service-url: 127.0.0.1
+  contact:
+    name: liuhh
+    email: 123@123.com
+    
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**Mapper.xml
+  typeAliasesPackage: org.sc.**.entity
+  
+  #config-location: classpath: mybatis-config.xml
+  global-config:
+    db-config:
+      id-type: auto
+      #驼峰下划线转换
+      column-underline: true
+      #逻辑删除配置
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      db-type: mysql
+      #super-mapper-class: org.sc.member.common.BaseMapper
+    refresh-mapper: true
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    call-setters-on-nulls: true
+
+  
+  
